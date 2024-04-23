@@ -71,6 +71,28 @@
         .a5_1, .a5_2{
             transition: all 0.1s linear;
         }
+        .a7_1, .a7_2{
+            transform: scale(1.5,1.5);
+            transition: all 0.1s linear;
+        }
+        .box:hover .a7_1, .box:hover .a7_2{
+            transform: scale(1,1);
+        }
+        .a9_2{
+            transform: scale(0,0);
+            transition: all 0.1s linear;
+        }
+        .box:hover .a9_2{
+            transform: scale(1,1);
+        }
+        .a9_1{
+            transform-origin: 62px center;
+            transform: rotateZ(0deg) scale(0,0);
+            transition: all 0.3s linear;
+        }
+        .box:hover .a9_1{
+            transform: rotateZ(360deg) scale(1,1);
+        }
     </style>
 </head>
 <body>
@@ -84,6 +106,18 @@
         <div class="common overlay overlay5">
             <a class="a5_1" href="#"><i class="fa-solid fa-link "></i></a>
             <a class="banchor a5_2" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </div>
+    <div class="common box">
+        <div class="common overlay overlay5 overlay7">
+            <a class="a7_1" href="#"><i class="fa-solid fa-link "></i></a>
+            <a class="banchor a7_2" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </div>
+    <div class="common box">
+        <div class="common overlay overlay5 overlay9">
+            <a class="a9_1" href="#"><i class="fa-solid fa-link "></i></a>
+            <a class="banchor a9_2" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
     </div>
 </body>
