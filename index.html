@@ -6,23 +6,24 @@
     <title>CSS Hover Effect</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .box{
+        .common{
             width: 280px;
             height: 212px;
+        }
+        .box{
             background-image: url("img/1.jpg");
             background-size: cover;
             box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
-            margin: 250px auto;
             position: relative;
             overflow: hidden;
+            float: left;
+            margin: 12px;
         }
 
         .box:hover .overlay{
             top: 0px;
         }
         .overlay{
-            width: 280px;
-            height: 212px;
             background: rgba(0, 0, 0, 0.5);
             position: absolute;
             top: -212px;
@@ -30,6 +31,14 @@
             transition-property: all;
             transition-duration: 0.3s;
             transition-timing-function: ease-in-out;
+        }
+        .overlay5{
+            top: 0px;
+            opacity: 0;
+            transition-duration: 0.2s;
+        }
+        .box:hover > .overlay5{
+            opacity: 1;
         }
         .overlay > a{
             display: inline-block;
@@ -47,13 +56,34 @@
         .banchor{
             left: 140px !important;
         }
+        .a5_1{
+            left: 50px !important;
+        }
+        .a5_2{
+            left: 180px !important;
+        }
+        .box:hover > .overlay5 .a5_1{
+            left: 85px !important;
+        }
+        .box:hover > .overlay5 .a5_2{
+            left: 140px !important;
+        }
+        .a5_1, .a5_2{
+            transition: all 0.1s linear;
+        }
     </style>
 </head>
 <body>
     <div class="common box">
-        <div class="overlay">
+        <div class="common overlay">
             <a href="#"><i class="fa-solid fa-link"></i></a>
             <a class="banchor" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </div>
+    <div class="common box">
+        <div class="common overlay overlay5">
+            <a class="a5_1" href="#"><i class="fa-solid fa-link "></i></a>
+            <a class="banchor a5_2" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
     </div>
 </body>
